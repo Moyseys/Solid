@@ -1,11 +1,6 @@
-// Ainda será refatorado
+// Foi refatorado em SRP
 
-interface Product {
-  nome: string;
-  price: number;
-}
-
-class ShoppingCart {
+export class ShoppingCartLegacy {
   private readonly _itens: Product[] = [];
   private _order: 'closed' | 'open' = 'open';
   constructor() {}
@@ -65,7 +60,7 @@ class ShoppingCart {
   }
 }
 
-const cart = new ShoppingCart();
+const cart = new ShoppingCartLegacy();
 cart.addItem({ nome: 'mouse', price: 20 });
 cart.addItem({ nome: 'Teclado', price: 250.5 });
 cart.addItem({ nome: 'NoteBook', price: 3700 });
