@@ -1,5 +1,8 @@
 // Foi refatorado em SRP
-
+export interface Product {
+  nome: string;
+  price: number;
+}
 export class ShoppingCartLegacy {
   private readonly _itens: Product[] = [];
   private _order: 'closed' | 'open' = 'open';
